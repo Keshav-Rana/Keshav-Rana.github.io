@@ -197,15 +197,17 @@ img {
 }
 .home__social {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Changed from column to row for horizontal layout */
   align-items: center;
   justify-content: center;
-  height: 100%;
-  margin-left: 35px;
+  gap: 1.5rem; /* Added gap for consistent spacing between icons */
+  height: auto; /* Changed from 100% to auto */
+  margin-left: 0; /* Removed left margin that was pushing icons to the side */
+  margin-top: 1.5rem; /* Added top margin for spacing from the title */
 }
 .home__social-icon {
   width: max-content;
-  margin-bottom: var(--mb-2);
+  margin-bottom: 0; /* Remove bottom margin that was spacing vertical icons */
   font-size: 1.5rem;
   color: var(--second-color);
 }
@@ -549,12 +551,13 @@ img {
   .home__social {
     padding-top: 0;
     padding-bottom: 2.5rem;
-    flex-direction: row;
-    align-self: flex-end;
+    flex-direction: row; /* Ensure it stays as row on larger screens */
+    align-self: flex-start; /* Changed from flex-end to align with the beginning of content */
+    margin-top: 1.5rem; /* Consistent spacing */
   }
   .home__social-icon {
     margin-bottom: 0;
-    margin-right: var(--mb-4);
+    margin-right: 0; /* Changed from var(--mb-4) since we're using gap for spacing */
   }
   .home__img {
     width: 300px;
