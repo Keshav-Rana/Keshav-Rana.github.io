@@ -4,21 +4,122 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Keshav Rana - Experienced Software Developer specializing in Salesforce, .NET, C#, and Azure. University of Adelaide graduate with expertise in full-stack development and enterprise applications.">
+        <meta name="keywords" content="Keshav Rana, Software Developer, Salesforce Developer, .NET Developer, C# Developer, Full Stack Developer, Azure, Microsoft Technologies, University of Adelaide, Web Development, Enterprise Applications">
+        <meta name="author" content="Keshav Rana">
+        <meta name="theme-color" content="#4070f4">
+
+        <!-- Open Graph Meta Tags for Social Media -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Keshav Rana | Software Developer | Salesforce • .NET • Azure">
+        <meta property="og:description" content="Experienced Software Developer with expertise in Salesforce, .NET, C#, and Azure. Building scalable enterprise applications and web solutions.">
+        <meta property="og:url" content="https://keshav-rana.github.io/">
+        <meta property="og:site_name" content="Keshav Rana Portfolio">
+        <meta property="og:image" content="https://keshav-rana.github.io/assets/img/og-image.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:locale" content="en_US">
+
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Keshav Rana | Software Developer | Salesforce • .NET • Azure">
+        <meta name="twitter:description" content="Experienced Software Developer with expertise in Salesforce, .NET, C#, and Azure. Building scalable enterprise applications and web solutions.">
+        <meta name="twitter:image" content="https://keshav-rana.github.io/assets/img/og-image.png">
+
+        <!-- Canonical URL -->
+        <meta name="canonical" content="https://keshav-rana.github.io/">
+        <link rel="canonical" href="https://keshav-rana.github.io/">
+
+        <!-- Favicon Links -->
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+        <!-- Web App Manifest -->
+        <link rel="manifest" href="manifest.json">
+
+        <!-- Resource Hints for Performance -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://unpkg.com">
+        <link rel="preconnect" href="https://cdn.jsdelivr.net">
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+        <link rel="dns-prefetch" href="https://unpkg.com">
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
         <link rel="stylesheet" href="assets/css/styles.css">
 
         <!-- =====BOX ICONS===== -->
-        <!-- <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'> -->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
         <!-- DEVICON FOR ICONS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon/devicon.min.css">
 
-        <title>Keshav Rana's portfolio website</title>
+        <title>Keshav Rana | Software Developer | Salesforce • .NET • Azure</title>
+
+        <!-- Structured Data (JSON-LD) -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Keshav Rana",
+          "url": "https://keshav-rana.github.io/",
+          "image": "https://keshav-rana.github.io/assets/img/profile.jpg",
+          "jobTitle": "Software Developer",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Winedirect"
+          },
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "University of Adelaide"
+          },
+          "knowsAbout": [
+            "Software Development",
+            "Salesforce",
+            ".NET",
+            "C#",
+            "Azure",
+            "Full Stack Development",
+            "Enterprise Applications",
+            "Web Development",
+            "Python",
+            "JavaScript",
+            "SQL",
+            "Redis",
+            "Docker"
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/in/r-keshav/",
+            "https://github.com/Keshav-Rana"
+          ],
+          "email": "krana1583@gmail.com"
+        }
+        </script>
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Keshav Rana Portfolio",
+          "url": "https://keshav-rana.github.io/",
+          "description": "Portfolio website of Keshav Rana, Software Developer specializing in Salesforce, .NET, and Azure technologies",
+          "author": {
+            "@type": "Person",
+            "name": "Keshav Rana"
+          }
+        }
+        </script>
     </head>
     <body>
+        <!-- Skip Navigation Link for Accessibility -->
+        <a href="#main" class="skip-link">Skip to main content</a>
+
         <!--===== HEADER =====-->
         <header class="l-header">
-            <nav class="nav bd-grid">
+            <nav class="nav bd-grid" role="navigation" aria-label="Main navigation">
                 <div>
                     <a href="#" class="nav__logo">Keshav Rana</a>
                 </div>
@@ -34,22 +135,22 @@
                     </ul>
                 </div>
 
-                <div class="nav__toggle" id="nav-toggle">
+                <div class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" role="button" aria-expanded="false">
                     <i class='bx bx-menu'></i>
                 </div>
             </nav>
         </header>
 
-        <main class="l-main">
+        <main class="l-main" id="main">
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
                     <h1 class="home__title">Keshav Rana</h1>
                     <!-- <a href="#" class="button">Contact</a> -->
                     <div class="home__social">
-                        <a href="https://www.linkedin.com/in/r-keshav/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                        <a href="https://github.com/Keshav-Rana" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                        <a href="mailto:krana1583@gmail.com" class="home__social-icon"><i class='bx bxs-envelope'></i></a>
+                        <a href="https://www.linkedin.com/in/r-keshav/" class="home__social-icon" aria-label="Visit my LinkedIn profile" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/Keshav-Rana" class="home__social-icon" aria-label="Visit my GitHub profile" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github' ></i></a>
+                        <a href="mailto:krana1583@gmail.com" class="home__social-icon" aria-label="Send me an email"><i class='bx bxs-envelope'></i></a>
                     </div>
                 </div>
 
@@ -335,7 +436,7 @@
                                 <span class="project__tech-tag">Redis Serialisation Protocol</span>
                             </div>
                             <div class="project__links">
-                                <a href="https://github.com/Keshav-Rana/Redis-Server" class="project__link"><i class='bx bxl-github'></i> Source Code</a>
+                                <a href="https://github.com/Keshav-Rana/Redis-Server" class="project__link" target="_blank" rel="noopener noreferrer" aria-label="View Lite Redis Server source code on GitHub"><i class='bx bxl-github'></i> Source Code</a>
                                 <!-- <a href="#" class="project__link"><i class='bx bx-link-external'></i> Live Demo</a> -->
                             </div>
                         </div>
@@ -353,7 +454,7 @@
                                 <span class="project__tech-tag">MySQL</span>
                             </div>
                             <div class="project__links">
-                                <a href="https://github.com/Keshav-Rana/Book-Management-System" class="project__link"><i class='bx bxl-github'></i> Source Code</a>
+                                <a href="https://github.com/Keshav-Rana/Book-Management-System" class="project__link" target="_blank" rel="noopener noreferrer" aria-label="View Book Management System source code on GitHub"><i class='bx bxl-github'></i> Source Code</a>
                                 <!-- <a href="#" class="project__link"><i class='bx bx-link-external'></i> Live Demo</a> -->
                             </div>
                         </div>
@@ -369,7 +470,7 @@
                                 <span class="project__tech-tag">C++</span>
                             </div>
                             <div class="project__links">
-                                <a href="https://github.com/Keshav-Rana/Football-Simulation-Game" class="project__link"><i class='bx bxl-github'></i> Source Code</a>
+                                <a href="https://github.com/Keshav-Rana/Football-Simulation-Game" class="project__link" target="_blank" rel="noopener noreferrer" aria-label="View Football Simulation source code on GitHub"><i class='bx bxl-github'></i> Source Code</a>
                                 <!-- <a href="#" class="project__link"><i class='bx bx-link-external'></i> Live Demo</a> -->
                             </div>
                         </div>
@@ -407,9 +508,9 @@
 
 
         <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://unpkg.com/scrollreveal" defer></script>
 
         <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
+        <script src="assets/js/main.js" defer></script>
     </body>
 </html>
