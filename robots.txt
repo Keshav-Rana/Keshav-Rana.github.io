@@ -1,8 +1,0 @@
-# robots.txt for Keshav Rana Portfolio
-
-# Allow all search engines to crawl the site
-User-agent: *
-Allow: /
-
-# Sitemap location
-Sitemap: https://keshav-rana.github.io/sitemap.xml
