@@ -27,30 +27,18 @@ const sections = document.querySelectorAll('section[id]')
 const scrollActive = () =>{
     const scrollDown = window.scrollY
 
-    // Remove all active links first
-    document.querySelectorAll('.nav__link').forEach(link => {
-        link.classList.remove('active-link')
+  sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight,
+              sectionTop = current.offsetTop - 58,
+              sectionId = current.getAttribute('id'),
+              sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+        
+        if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
+            sectionsClass.classList.add('active-link')
+        }else{
+            sectionsClass.classList.remove('active-link')
+        }                                                    
     })
-
-    // Find the section that should be active
-    let currentSection = ''
-
-    sections.forEach(current =>{
-        const sectionTop = current.offsetTop - 200
-        const sectionId = current.getAttribute('id')
-
-        if(scrollDown >= sectionTop){
-            currentSection = sectionId
-        }
-    })
-
-    // Highlight the current section's link
-    if(currentSection){
-        const activeLink = document.querySelector('.nav__menu a[href*=' + currentSection + ']')
-        if(activeLink){
-            activeLink.classList.add('active-link')
-        }
-    }
 }
 window.addEventListener('scroll', scrollActive)
 
