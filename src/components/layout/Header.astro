@@ -1,0 +1,158 @@
+---
+import { profile } from '../../data/profile';
+
+const navLinks = [
+  { label: 'About', href: '#about' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Certifications', href: '#certifications' },
+  { label: 'Education', href: '#education' },
+  { label: 'Contact', href: '#contact' },
+];
+---
+
+<header
+  id="site-header"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-slate-950 backdrop-blur-md"
+>
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+    <a
+      href="#hero"
+      class="text-xl font-bold gradient-text hover:opacity-80 transition-opacity"
+    >
+      KR
+    </a>
+
+    <!-- Desktop nav -->
+    <ul class="hidden md:flex items-center gap-8">
+      {
+        navLinks.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="text-sm text-slate-200 hover:text-white transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-indigo-400 after:transition-all after:duration-300 hover:after:w-full"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+      <li>
+        <a
+          href={profile.resume}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm font-medium text-white border border-slate-500 hover:border-indigo-400 hover:bg-indigo-500/10 hover:text-indigo-300 px-4 py-1.5 rounded-full transition-all duration-200"
+        >
+          Resume <span class="text-xs">&#8599;</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile hamburger -->
+    <button
+      id="menu-toggle"
+      class="md:hidden relative z-[101] w-8 h-8 flex flex-col items-center justify-center gap-1.5"
+      aria-label="Toggle menu"
+    >
+      <span class="menu-bar w-6 h-0.5 bg-slate-300 transition-all duration-300 origin-center"></span>
+      <span class="menu-bar w-6 h-0.5 bg-slate-300 transition-all duration-300"></span>
+      <span class="menu-bar w-6 h-0.5 bg-slate-300 transition-all duration-300 origin-center"></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile menu overlay — outside header for independent stacking context -->
+<div
+  id="mobile-menu"
+  class="md:hidden fixed inset-0 bg-slate-950 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 z-[100]"
+>
+  <ul class="flex flex-col items-center gap-8">
+    {
+      navLinks.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class="mobile-nav-link text-2xl font-medium text-slate-300 hover:text-white transition-colors"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))
+    }
+    <li>
+      <a
+        href={profile.resume}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mobile-nav-link text-2xl font-medium text-indigo-400 hover:text-indigo-300 transition-colors"
+      >
+        Resume <span class="text-lg">&#8599;</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<script>
+  const header = document.getElementById('site-header');
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const bars = toggle?.querySelectorAll('.menu-bar');
+  const mobileLinks = menu?.querySelectorAll('.mobile-nav-link');
+  let isOpen = false;
+
+  // Scroll-based header border
+  window.addEventListener('scroll', () => {
+    if (!header) return;
+    if (window.scrollY > 50) {
+      header.classList.add('border-b', 'border-slate-800/50');
+    } else {
+      header.classList.remove('border-b', 'border-slate-800/50');
+    }
+  });
+
+  function openMenu() {
+    isOpen = true;
+    if (menu) {
+      menu.classList.remove('opacity-0', 'pointer-events-none');
+    }
+    document.body.style.overflow = 'hidden';
+    if (bars && bars.length >= 3) {
+      (bars[0] as HTMLElement).style.transform = 'rotate(45deg) translate(3px, 3px)';
+      (bars[1] as HTMLElement).style.opacity = '0';
+      (bars[2] as HTMLElement).style.transform = 'rotate(-45deg) translate(3px, -3px)';
+    }
+  }
+
+  function closeMenu() {
+    isOpen = false;
+    if (menu) {
+      menu.classList.add('opacity-0', 'pointer-events-none');
+    }
+    document.body.style.overflow = '';
+    if (bars && bars.length >= 3) {
+      (bars[0] as HTMLElement).style.transform = '';
+      (bars[1] as HTMLElement).style.opacity = '1';
+      (bars[2] as HTMLElement).style.transform = '';
+    }
+  }
+
+  // Mobile menu toggle
+  toggle?.addEventListener('click', () => {
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // Close mobile menu on link click
+  mobileLinks?.forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Close mobile menu on scroll
+  window.addEventListener('scroll', () => {
+    if (isOpen) closeMenu();
+  });
+</script>

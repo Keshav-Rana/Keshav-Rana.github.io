@@ -1,0 +1,52 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro';
+import { certifications } from '../../data/certifications';
+---
+
+<section id="certifications" class="relative">
+  <div class="section-container">
+    <SectionHeading
+      title="Certifications"
+      subtitle="Validated expertise across enterprise platforms and AI"
+    />
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {
+        certifications.map((cert, i) => (
+          <div
+            class="card group"
+            data-animate="fade-up"
+            style={`animation-delay: ${i * 100}ms`}
+          >
+            <div class="flex items-start gap-4">
+              <div
+                class="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110"
+                style={`background-color: ${cert.color}15; border: 1px solid ${cert.color}30`}
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke={cert.color}
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-white text-sm leading-tight mb-1">
+                  {cert.name}
+                </h3>
+                <p class="text-xs text-slate-400">{cert.issuer}</p>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

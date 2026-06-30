@@ -1,0 +1,15 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro';
+import ExperienceTimeline from '../react/ExperienceTimeline';
+import { experiences } from '../../data/experience';
+---
+
+<section id="experience" class="relative">
+  <div class="section-container">
+    <SectionHeading
+      title="Experience"
+      subtitle="Consistent delivery across every role and platform"
+    />
+    <ExperienceTimeline client:visible experiences={experiences} />
+  </div>
+</section>

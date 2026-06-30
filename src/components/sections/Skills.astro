@@ -1,0 +1,15 @@
+---
+import SectionHeading from '../ui/SectionHeading.astro';
+import SkillGrid from '../react/SkillGrid';
+import { skills } from '../../data/skills';
+---
+
+<section id="skills" class="relative">
+  <div class="section-container">
+    <SectionHeading
+      title="Tech Stack"
+      subtitle="Breadth across the full stack — from frontend to cloud to AI"
+    />
+    <SkillGrid client:visible skills={skills} />
+  </div>
+</section>

@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-950 text-slate-50 antialiased;
+  }
+
+  ::selection {
+    @apply bg-indigo-500 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-950;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-700 rounded-full;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-slate-900/50 backdrop-blur-md border border-slate-700/50;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent;
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28;
+  }
+
+  .card {
+    @apply bg-slate-900/60 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 transition-all duration-300;
+  }
+
+  .card:hover {
+    @apply border-indigo-500/30 shadow-lg shadow-indigo-500/10;
+    transform: scale(1.02);
+  }
+
+  .skill-tag {
+    @apply px-3 py-1.5 text-sm rounded-lg bg-slate-800/80 border border-slate-700/50 text-slate-300 transition-all duration-200;
+  }
+
+  .skill-tag:hover {
+    @apply -translate-y-0.5 border-indigo-500/40 text-indigo-300 bg-indigo-500/10;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 4s ease infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+.animate-fade-up-delay-1 {
+  animation: fade-up 0.6s ease-out 0.1s forwards;
+  opacity: 0;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-fade-up-delay-3 {
+  animation: fade-up 0.6s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.animate-fade-up-delay-4 {
+  animation: fade-up 0.6s ease-out 0.4s forwards;
+  opacity: 0;
+}

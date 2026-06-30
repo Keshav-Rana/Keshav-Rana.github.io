@@ -1,0 +1,60 @@
+---
+import { profile } from '../../data/profile';
+import ParticleBackground from '../react/ParticleBackground';
+---
+
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+  <!-- 3D Background -->
+  <div class="absolute inset-0 z-0">
+    <ParticleBackground client:only="react" />
+  </div>
+
+  <!-- Gradient overlay for depth -->
+  <div class="absolute inset-0 z-[1] bg-gradient-to-b from-transparent via-transparent to-slate-950 pointer-events-none"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+    <p class="text-sm md:text-base uppercase tracking-[0.3em] text-indigo-400 font-medium mb-6 animate-fade-up">
+      Software Engineer
+    </p>
+
+    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-up-delay-1">
+      <span class="gradient-text animate-gradient bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+        {profile.name}
+      </span>
+    </h1>
+
+    <p class="text-lg md:text-xl text-slate-400 font-light mb-4 animate-fade-up-delay-2">
+      {profile.subtitle}
+    </p>
+
+    <p class="text-base md:text-lg text-slate-500 max-w-2xl mx-auto mb-10 animate-fade-up-delay-3">
+      {profile.tagline}
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up-delay-4">
+      <a
+        href="#experience"
+        class="group px-8 py-3 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25 hover:-translate-y-0.5"
+      >
+        View My Work
+        <span class="inline-block ml-1 transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+      </a>
+      <a
+        href="#contact"
+        class="px-8 py-3 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25 hover:-translate-y-0.5"
+      >
+        Get In Touch
+      </a>
+      <a
+        href={profile.resume}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="px-8 py-3 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25 hover:-translate-y-0.5"
+      >
+        Resume <span class="text-xs">&#8599;</span>
+      </a>
+    </div>
+  </div>
+
+</section>

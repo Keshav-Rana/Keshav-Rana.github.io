@@ -1,0 +1,130 @@
+import type { ExperienceItem } from '../types';
+
+export const experiences: ExperienceItem[] = [
+  {
+    id: 'servicenow-dfe',
+    role: 'ServiceNow Developer',
+    company: 'Department for Education, South Australia',
+    location: 'Adelaide, SA',
+    dateRange: 'Apr 2026 — Present',
+    type: 'full-time',
+    summary:
+      'Delivering end-to-end ServiceNow HRSD implementation to digitise HR services.',
+    achievements: [
+      "Delivering end-to-end ServiceNow HR Service Delivery (HRSD) implementation to digitise the department's HR services, including workflow automation.",
+      'Owning the full delivery lifecycle — requirements gathering, design, build and testing — alongside ongoing maintenance of the existing system.',
+      'Adapted rapidly to a new platform, domain and the structured delivery cadence of a large public-sector organisation.',
+    ],
+    techStack: ['ServiceNow', 'HRSD', 'Flow Designer', 'JavaScript'],
+    color: '#6366f1',
+  },
+  {
+    id: 'expertease-ai',
+    role: 'Full Stack Developer',
+    company: 'ExpertEaseAI',
+    location: 'Adelaide, SA',
+    dateRange: 'Jul 2025 — Mar 2026',
+    type: 'full-time',
+    summary:
+      'Built a no-code AI product for creating voice and chat AI agents across enterprise systems.',
+    achievements: [
+      'Built a no-code AI product that lets users create AI agents over voice and chat to perform tasks across enterprise systems such as CRMs.',
+      'Engineered an end-to-end Voice AI system using Twilio Voice APIs integrated with the OpenAI Realtime API for live speech-to-speech.',
+      'Built responsive React / Tailwind interfaces with reusable component architecture, plus RESTful backend APIs.',
+      'Designed integrations with major third-party systems (CRM, helpdesk, calendar, payments, e-commerce) and layered agentic AI / LLM tooling on top.',
+      'Designed and implemented CI/CD pipelines with Docker for automated deployment to a hybrid cloud spanning Azure and GCP.',
+    ],
+    techStack: [
+      'React',
+      'Tailwind CSS',
+      'Python',
+      'FastAPI',
+      'Docker',
+      'Azure',
+      'GCP',
+      'OpenAI API',
+      'Twilio',
+      'LangChain',
+    ],
+    color: '#06b6d4',
+  },
+  {
+    id: 'winedirect',
+    role: 'Junior Salesforce Developer',
+    company: 'WineDirect Fulfillment',
+    location: 'Adelaide, SA',
+    dateRange: 'Jul 2024 — Jun 2025',
+    type: 'full-time',
+    summary:
+      'Salesforce Order Management System implementation — API development, debugging, and deployment.',
+    achievements: [
+      'Built RESTful APIs in Apex for integration with external systems via connected apps; developed custom Lightning Web Components.',
+      'Improved reliability by resolving 40+ critical bugs and optimising functionality using Flows and custom Apex.',
+      'Deployed change sets — bug fixes, hotfixes, releases and enhancements; built CI pipelines in Azure DevOps to sync Salesforce instances with Git.',
+      'Maintained test classes at the required 75% threshold.',
+    ],
+    techStack: [
+      'Salesforce',
+      'Apex',
+      'Lightning Web Components',
+      'Azure DevOps',
+      'REST APIs',
+      'Flows',
+    ],
+    color: '#8b5cf6',
+  },
+  {
+    id: 'deloitte',
+    role: 'Consultant (Intern)',
+    company: 'Deloitte',
+    location: 'Adelaide, SA',
+    dateRange: 'Aug 2023 — Dec 2023',
+    type: 'internship',
+    summary:
+      'Legacy HR system migration to ServiceNow HRSD — data mapping, workflow automation, and virtual agent tuning.',
+    achievements: [
+      'Contributed to a legacy HR system migration to ServiceNow HRSD: assisted with data mapping and structured data migration.',
+      'Built workflow automation in Flow Designer — onboarding, payroll approvals, employee requests.',
+      'Tuned the ServiceNow Virtual Agent to resolve employee queries faster.',
+      'Shadowed senior consultants across client interaction, requirements gathering and solution recommendation.',
+    ],
+    techStack: [
+      'ServiceNow',
+      'HRSD',
+      'Flow Designer',
+      'Virtual Agent',
+      'Data Migration',
+    ],
+    color: '#10b981',
+  },
+  {
+    id: 'uofa-research',
+    role: 'Research Assistant',
+    company: 'University of Adelaide',
+    location: 'Adelaide, SA',
+    dateRange: 'Nov 2023 — Jan 2024',
+    type: 'contract',
+    summary:
+      'Built a rule-based tool analysing C and C++ code for code smells and recommending refactoring.',
+    achievements: [
+      'Built a rule-based static analysis tool for C and C++ code that detects code antipatterns and recommends refactoring strategies.',
+    ],
+    techStack: ['C++', 'C', 'Static Analysis', 'Python'],
+    color: '#f59e0b',
+  },
+  {
+    id: 'cs-tutor',
+    role: 'Computer Science Tutor',
+    company: 'Self-employed',
+    location: 'Adelaide, SA',
+    dateRange: 'Jul 2022 — Mar 2023',
+    type: 'part-time',
+    summary:
+      'Helped students with OOP, Algorithm Design, and Data Structures courses in C++.',
+    achievements: [
+      'Helped students with Object-Oriented Programming, Algorithm Design, and Data Structures courses in C++.',
+    ],
+    techStack: ['C++', 'Data Structures', 'Algorithms', 'OOP'],
+    color: '#ec4899',
+  },
+];
