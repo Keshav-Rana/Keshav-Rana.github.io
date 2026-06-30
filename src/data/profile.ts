@@ -2,7 +2,7 @@ export const profile = {
   name: 'Keshav Rana',
   title: 'Software Engineer',
   subtitle: 'Full-Stack · Cloud · Enterprise Platforms · AI',
-  tagline: 'Building end-to-end solutions across every layer of the stack.',
+  tagline: 'Building end-to-end solutions to deliver business outcomes.',
   location: 'Adelaide, SA, Australia',
   email: 'krana1583@gmail.com',
   phone: '+61 415 180 332',
